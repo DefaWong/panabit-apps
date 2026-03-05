@@ -56,7 +56,7 @@ export function AppCard({ app, index }: AppCardProps) {
         {/* Header */}
         <div className="flex items-start gap-4 mb-4">
           <div
-            className="w-16 h-16 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 overflow-hidden"
+            className="w-12 h-12 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110 overflow-hidden"
             style={{
               background: 'linear-gradient(135deg, rgba(0, 212, 170, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%)',
               border: '1px solid rgba(0, 212, 170, 0.2)',
@@ -65,14 +65,14 @@ export function AppCard({ app, index }: AppCardProps) {
             <img 
               src={app.icon} 
               alt={app.name}
-              className="w-14 h-14 object-contain"
+              className="w-10 h-10 object-contain"
               style={{ imageRendering: 'auto' }}
               onError={(e) => {
                 // 如果图标加载失败，显示默认图标
                 (e.target as HTMLImageElement).style.display = 'none';
                 const parent = (e.target as HTMLImageElement).parentElement;
                 if (parent) {
-                  parent.innerHTML = '<span class="text-3xl">📦</span>';
+                  parent.innerHTML = '<span class="text-2xl">📦</span>';
                 }
               }}
             />

@@ -1,3 +1,5 @@
+import { apps, categories } from '../data/apps';
+
 export function Hero() {
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
@@ -57,7 +59,7 @@ export function Hero() {
         >
           <span className="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse" />
           <span className="text-sm text-[var(--color-primary)] font-mono">
-            已收录 {5} 个应用
+            已收录 {apps.length} 个应用
           </span>
         </div>
 
@@ -124,7 +126,7 @@ export function Hero() {
           style={{ animationDelay: '400ms' }}
         >
           <div className="text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-white">5</div>
+            <div className="text-2xl sm:text-3xl font-bold text-white">{apps.length}</div>
             <div className="text-sm text-[var(--color-text-muted)]">应用</div>
           </div>
           <div className="text-center">
@@ -132,7 +134,7 @@ export function Hero() {
             <div className="text-sm text-[var(--color-text-muted)]">架构支持</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl sm:text-3xl font-bold text-white">5</div>
+            <div className="text-2xl sm:text-3xl font-bold text-white">{categories.length - 1}</div>
             <div className="text-sm text-[var(--color-text-muted)]">分类</div>
           </div>
         </div>

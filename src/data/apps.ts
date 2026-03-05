@@ -133,6 +133,26 @@ export const apps: App[] = [
       { version: '2026.01.09', date: '2026-01-09', changes: ['初始发布', '集成 iPerf3 核心功能', 'Universal 架构支持'] },
     ],
   },
+  {
+    id: 'panabit-ddns-go',
+    name: 'DDNS-GO',
+    description: '一个 Panabit 智能应用网关插件，可在不开启 SSH 的条件下为用户安装和维护 jeessy2/ddns-go，实现动态域名解析功能。',
+    icon: getAppIconPath('panabit-ddns-go'),
+    author: 'szu17dmy',
+    publishDate: '2023-12-22',
+    lastUpdate: '2024-11-28',
+    version: '0.0.2-rc2',
+    category: '网络工具',
+    tags: ['DDNS', '动态域名', 'DNS'],
+    downloads: [
+      { architecture: 'arm64', url: getAppDownloadPath('panabit-ddns-go', 'panabit-ddns-go-arm64.tar.gz'), size: '7.2 MB' },
+      { architecture: 'x86', url: getAppDownloadPath('panabit-ddns-go', 'panabit-ddns-go-amd64.tar.gz'), size: '7.9 MB' },
+    ],
+    updateHistory: [
+      { version: '0.0.2-rc2', date: '2024-11-28', changes: ['修复 x86 VM 上更新证书失败的问题', '支持 ax40-10k 及其他型号'] },
+      { version: '0.0.2-rc1', date: '2023-12-22', changes: ['支持 linux/amd64 架构', '升级 ddns-go 到 5.7.1'] },
+    ],
+  },
 ];
 
 export const categories = ['全部', '网络工具', '系统工具', '监控工具', '安全工具', '分析工具'];
