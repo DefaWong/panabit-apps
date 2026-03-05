@@ -69,11 +69,9 @@ export function AppCard({ app, index }: AppCardProps) {
               style={{ imageRendering: 'auto' }}
               onError={(e) => {
                 // 如果图标加载失败，显示默认图标
-                (e.target as HTMLImageElement).style.display = 'none';
-                const parent = (e.target as HTMLImageElement).parentElement;
-                if (parent) {
-                  parent.innerHTML = '<span class="text-2xl">📦</span>';
-                }
+                const img = e.target as HTMLImageElement;
+                img.src = 'app.png';
+                img.onerror = null;
               }}
             />
           </div>
