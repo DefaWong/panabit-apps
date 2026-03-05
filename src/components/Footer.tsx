@@ -39,7 +39,7 @@ export function Footer() {
           </div>
 
           <div className="text-sm text-[var(--color-text-muted)]">
-            © 2025 Panabit App Store. 社区驱动项目
+            © 2026 Panabit App Store. 社区驱动项目
           </div>
         </div>
       </div>

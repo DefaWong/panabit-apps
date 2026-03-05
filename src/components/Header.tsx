@@ -56,7 +56,7 @@ export function Header() {
               提交应用
             </a>
             <a
-              href="https://github.com/panabit"
+              href="https://github.com/DefaWong/panabit-apps"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
