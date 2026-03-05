@@ -177,7 +177,7 @@ export function AppCard({ app, index }: AppCardProps) {
                 <div key={idx} className="text-sm">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="font-mono font-semibold text-[var(--color-primary)]">
-                      v{record.version}
+                      {record.version}
                     </span>
                     <span className="text-[var(--color-text-muted)] text-xs">{record.date}</span>
                   </div>

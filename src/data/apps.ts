@@ -45,7 +45,7 @@ export const apps: App[] = [
     author: 'AdGuard',
     publishDate: '2026-02-26',
     lastUpdate: '2026-03-02',
-    version: '2026.03.02',
+    version: '20260302.184349',
     category: '网络工具',
     tags: ['DNS', '广告拦截', '隐私保护'],
     downloads: [
@@ -53,8 +53,8 @@ export const apps: App[] = [
       { architecture: 'x86', url: getAppDownloadPath('panabit-adguard-home', 'panabit-adguard-home-amd64-20260302.184349.apx'), size: '10.9 MB' },
     ],
     updateHistory: [
-      { version: '2026.03.02', date: '2026-03-02', changes: ['更新 AdGuard Home 核心版本', '支持一键重置'] },
-      { version: '2026.02.26', date: '2026-02-26', changes: ['初始发布', '支持 arm64 和 x86 架构'] },
+      { version: '20260302.184349', date: '2026-03-02', changes: ['更新 AdGuard Home 核心版本', '支持一键重置'] },
+      { version: '20260226.183113', date: '2026-02-26', changes: ['初始发布', '支持 arm64 和 x86 架构'] },
     ],
   },
   {
@@ -65,7 +65,7 @@ export const apps: App[] = [
     author: 'pymumu',
     publishDate: '2026-02-26',
     lastUpdate: '2026-02-26',
-    version: '2026.02.26',
+    version: '20260226.194409',
     category: '网络工具',
     tags: ['DNS', '分流', '网络优化'],
     downloads: [
@@ -73,7 +73,7 @@ export const apps: App[] = [
       { architecture: 'x86', url: getAppDownloadPath('panabit-smartdns', 'panabit-smartdns-amd64-20260226.194410.apx'), size: '2.0 MB' },
     ],
     updateHistory: [
-      { version: '2026.02.26', date: '2026-02-26', changes: ['初始发布', '支持 arm64 和 x86 架构', '集成 SmartDNS 核心功能'] },
+      { version: '20260226.194409', date: '2026-02-26', changes: ['初始发布', '支持 arm64 和 x86 架构', '集成 SmartDNS 核心功能'] },
     ],
   },
   {
@@ -84,15 +84,15 @@ export const apps: App[] = [
     author: 'panabit-community',
     publishDate: '2026-01-03',
     lastUpdate: '2026-01-13',
-    version: '2026.01.13',
+    version: '20260113.170333',
     category: '网络工具',
     tags: ['中继', 'RTMP', '负载均衡', '推流', '拉流'],
     downloads: [
       { architecture: 'universal', url: getAppDownloadPath('panabit-relay', 'panabit-relay-20260113.170333.apx'), size: '3.7 MB' },
     ],
     updateHistory: [
-      { version: '2026.01.13', date: '2026-01-13', changes: ['支持拉黑客户端', '修复内存泄漏问题'] },
-      { version: '2026.01.08', date: '2026-01-08', changes: ['优化分类展示', '支持音画同步开关'] },
+      { version: '20260113.170333', date: '2026-01-13', changes: ['支持拉黑客户端', '修复内存泄漏问题'] },
+      { version: '20260108.175500', date: '2026-01-08', changes: ['优化分类展示', '支持音画同步开关'] },
     ],
   },
   {
@@ -103,7 +103,7 @@ export const apps: App[] = [
     author: 'panabit-community',
     publishDate: '2026-03-04',
     lastUpdate: '2026-03-05',
-    version: '2026.03.05',
+    version: '20260305.112625',
     category: '系统工具',
     tags: ['同步', '动态域名', '自动化'],
     downloads: [
@@ -111,8 +111,8 @@ export const apps: App[] = [
       { architecture: 'x86', url: getAppDownloadPath('panabit-dynamic-sync', 'panabit-dynamic-group-sync-amd64-20260305.112625.apx'), size: '2.7 MB' },
     ],
     updateHistory: [
-      { version: '2026.03.05', date: '2026-03-05', changes: ['新增 IP 群组动态组同步功能', '优化同步性能'] },
-      { version: '2026.03.04', date: '2026-03-04', changes: ['初始发布', '域名动态同步功能'] },
+      { version: '20260305.112625', date: '2026-03-05', changes: ['新增 IP 群组动态组同步功能', '优化同步性能'] },
+      { version: '20260304.194747', date: '2026-03-04', changes: ['初始发布', '域名动态同步功能'] },
     ],
   },
   {
@@ -123,14 +123,14 @@ export const apps: App[] = [
     author: 'ESnet',
     publishDate: '2026-01-09',
     lastUpdate: '2026-01-09',
-    version: '2026.01.09',
+    version: '20260109.190452',
     category: '网络工具',
     tags: ['测速', '性能测试', '网络诊断'],
     downloads: [
       { architecture: 'universal', url: getAppDownloadPath('panabit-iperf3', 'panabit-iperf3-20260109.190452.apx'), size: '155 KB' },
     ],
     updateHistory: [
-      { version: '2026.01.09', date: '2026-01-09', changes: ['初始发布', '集成 iPerf3 核心功能', 'Universal 架构支持'] },
+      { version: '20260109.190452', date: '2026-01-09', changes: ['初始发布', '集成 iPerf3 核心功能', 'Universal 架构支持'] },
     ],
   },
   {
