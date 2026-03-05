@@ -83,14 +83,15 @@ export const apps: App[] = [
     icon: getAppIconPath('panabit-relay'),
     author: 'panabit-community',
     publishDate: '2026-01-03',
-    lastUpdate: '2026-01-13',
-    version: '20260113.170333',
+    lastUpdate: '2026-03-05',
+    version: '20260305.211137',
     category: '网络工具',
     tags: ['中继', 'RTMP', '负载均衡', '推流', '拉流'],
     downloads: [
-      { architecture: 'universal', url: getAppDownloadPath('panabit-relay', 'panabit-relay-20260113.170333.apx'), size: '3.7 MB' },
+      { architecture: 'universal', url: getAppDownloadPath('panabit-relay', 'panabit-relay-20260305.211137.apx'), size: '3.7 MB' },
     ],
     updateHistory: [
+      { version: '20260305.211137', date: '2026-03-05', changes: ['修复应用禁用后定时任务未退出', '禁用组播功能'] },
       { version: '20260113.170333', date: '2026-01-13', changes: ['支持拉黑客户端', '修复内存泄漏问题'] },
       { version: '20260108.175500', date: '2026-01-08', changes: ['优化分类展示', '支持音画同步开关'] },
     ],
