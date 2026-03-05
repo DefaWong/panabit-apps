@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Panabit App Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Panabit 应用商店前端项目，用于展示和管理 Panabit 兼容的第三方应用。
 
-Currently, two official plugins are available:
+## 在线访问
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://defawong.github.io/panabit-apps/
 
-## React Compiler
+## 功能特性
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **应用浏览** - 分类展示所有可用的 Panabit 应用
+- **应用详情** - 查看应用介绍、版本、更新日志和下载链接
+- **架构支持** - 支持 arm64、x86、universal 多种架构
+- **应用提交** - 通过 GitHub Issues 提交新应用
 
-## Expanding the ESLint configuration
+## 技术栈
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19 + TypeScript 5.9
+- Vite 7.3
+- Tailwind CSS 4.2
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 本地开发
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# 安装依赖
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 启动开发服务器
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+访问 http://localhost:5173/panabit-apps/
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 构建部署
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# 构建生产版本
+npm run build
 ```
+
+项目使用 GitHub Actions 自动部署到 GitHub Pages，推送代码到 main 分支即可触发自动构建和部署。
+
+## 添加新应用
+
+1. 将应用包文件放入 `public/apps/{应用ID}/downloads/` 目录
+2. 将应用图标放入 `public/apps/{应用ID}/icon.png`
+3. 在 `src/data/apps.ts` 中添加应用信息
+4. 提交 Pull Request 或在 GitHub Issues 中提交应用信息
+
+## 应用列表
+
+| 应用 | 描述 | 作者 |
+|------|------|------|
+| AdGuard Home | DNS 广告拦截与隐私保护 | AdGuard |
+| SmartDNS | 智能 DNS 分流 | pymumu |
+| 直播网关 | RTMP 推流/拉流分发 | panabit-community |
+| Dynamic Sync | 域名/IP 动态同步 | panabit-community |
+| iPerf3 | 网络性能测试 | ESnet |
