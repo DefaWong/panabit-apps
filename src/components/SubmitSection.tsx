@@ -104,7 +104,7 @@ export function SubmitSection() {
 
             <div className="text-center">
               <a
-                href="https://github.com/panabit/app-store/issues/new?template=submit-app.md"
+                href="https://github.com/DefaWong/panabit-apps/issues"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105"

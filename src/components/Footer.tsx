@@ -17,7 +17,7 @@ export function Footer() {
 
           <div className="flex items-center gap-6 text-sm text-[var(--color-text-muted)]">
             <a
-              href="https://github.com/panabit/app-store"
+              href="https://github.com/DefaWong/panabit-apps"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
