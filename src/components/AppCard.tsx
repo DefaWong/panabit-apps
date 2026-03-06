@@ -181,11 +181,10 @@ export function AppCard({ app, index }: AppCardProps) {
                     </span>
                     <span className="text-[var(--color-text-muted)] text-xs">{record.date}</span>
                   </div>
-                  <ul className="text-[var(--color-text-muted)] text-xs space-y-1 ml-4">
+                  <ul className="text-[var(--color-text-muted)] text-xs space-y-1 ml-4 list-disc list-inside">
                     {record.changes.map((change, cidx) => (
-                      <li key={cidx} className="flex items-start gap-2">
-                        <span className="text-[var(--color-primary)] mt-1">•</span>
-                        <span>{change}</span>
+                      <li key={cidx} className="marker:text-[var(--color-primary)]">
+                        {change}
                       </li>
                     ))}
                   </ul>
