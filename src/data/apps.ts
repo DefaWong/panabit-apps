@@ -154,6 +154,25 @@ export const apps: App[] = [
       { version: '0.0.2-rc1', date: '2023-12-22', changes: ['支持 linux/amd64 架构', '升级 ddns-go 到 5.7.1'] },
     ],
   },
+  {
+    id: 'panabit-stun',
+    name: 'STUN 公网穿透',
+    description: 'STUN 端口穿透映射服务',
+    icon: getAppIconPath('panabit-stun'),
+    author: 'panabit-community',
+    publishDate: '2026-03-07',
+    lastUpdate: '2026-03-07',
+    version: '20260307.024435',
+    category: '网络工具',
+    tags: ['STUN', 'NAT1', '端口映射', '穿透'],
+    downloads: [
+      { architecture: 'arm64', url: getAppDownloadPath('panabit-stun', 'panabit-stun-arm64-20260307.024435.apx'), size: '1.3 MB' },
+      { architecture: 'x86', url: getAppDownloadPath('panabit-stun', 'panabit-stun-amd64-20260307.024435.apx'), size: '1.4 MB' },
+    ],
+    updateHistory: [
+      { version: '20260307.024435', date: '2026-03-07', changes: ['初始发布', '支持 arm64 和 x86 架构', '实现 STUN 穿透'] },
+    ],
+  },
 ];
 
 export const categories = ['全部', '网络工具', '系统工具', '监控工具', '安全工具', '分析工具'];
