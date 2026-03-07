@@ -2,21 +2,26 @@ import { useState, useMemo } from 'react';
 import { apps, categories } from '../data/apps';
 import { AppCard } from './AppCard';
 
+// 获取所有开发者列表（去重并排序）
+const authors = ['全部开发者', ...Array.from(new Set(apps.map(app => app.author))).sort()];
+
 export function AppList() {
   const [selectedCategory, setSelectedCategory] = useState('全部');
+  const [selectedAuthor, setSelectedAuthor] = useState('全部开发者');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredApps = useMemo(() => {
     return apps.filter((app) => {
       const matchesCategory = selectedCategory === '全部' || app.category === selectedCategory;
+      const matchesAuthor = selectedAuthor === '全部开发者' || app.author === selectedAuthor;
       const matchesSearch =
         searchQuery === '' ||
         app.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         app.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         app.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      return matchesCategory && matchesSearch;
+      return matchesCategory && matchesAuthor && matchesSearch;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, selectedAuthor, searchQuery]);
 
   return (
     <section id="apps" className="py-20 px-6">
@@ -88,6 +93,28 @@ export function AppList() {
               </button>
             ))}
           </div>
+        </div>
+
+        {/* Author filter */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          <span className="text-sm text-[var(--color-text-muted)] py-2 mr-2">开发者:</span>
+          {authors.map((author) => (
+            <button
+              key={author}
+              onClick={() => setSelectedAuthor(author)}
+              className="px-3 py-1.5 rounded-lg text-sm transition-all duration-200"
+              style={{
+                background:
+                  selectedAuthor === author
+                    ? 'rgba(99, 102, 241, 0.2)'
+                    : 'var(--color-surface)',
+                color: selectedAuthor === author ? '#818cf8' : 'var(--color-text-muted)',
+                border: `1px solid ${selectedAuthor === author ? 'rgba(99, 102, 241, 0.4)' : 'var(--color-border)'}`,
+              }}
+            >
+              {author === '全部开发者' ? '全部' : `@${author}`}
+            </button>
+          ))}
         </div>
 
         {/* Results count */}

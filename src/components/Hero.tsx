@@ -1,5 +1,9 @@
 import { apps, categories } from '../data/apps';
 
+// 计算开发者人数（根据 author 去重）
+const uniqueAuthors = new Set(apps.map(app => app.author));
+const authorCount = uniqueAuthors.size;
+
 export function Hero() {
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-32 pb-16">
@@ -136,6 +140,10 @@ export function Hero() {
           <div className="text-center">
             <div className="text-2xl sm:text-3xl font-bold text-white">{categories.length - 1}</div>
             <div className="text-sm text-[var(--color-text-muted)]">分类</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl sm:text-3xl font-bold text-white">{authorCount}</div>
+            <div className="text-sm text-[var(--color-text-muted)]">开发者</div>
           </div>
         </div>
       </div>
