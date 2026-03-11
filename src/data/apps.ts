@@ -173,6 +173,24 @@ export const apps: App[] = [
       { version: '20260307.024435', date: '2026-03-07', changes: ['初始发布', '实现 NAT 穿透'] },
     ],
   },
+  {
+    id: 'panabit-split-tunnel-testing',
+    name: 'Split Tunnel 分流测试',
+    description: '用于测试和验证路由策略，检查不同出站路径使用的 IP 地址',
+    icon: getAppIconPath('panabit-split-tunnel-testing'),
+    author: 'unizhu',
+    publishDate: '2026-03-07',
+    lastUpdate: '2026-03-07',
+    version: '0.1',
+    category: '网络工具',
+    tags: ['分流', '路由测试', '策略验证'],
+    downloads: [
+      { architecture: 'arm64', url: getAppDownloadPath('panabit-split-tunnel-testing', 'splitunnel-arm64-v0.1.apx'), size: '787 KB' },
+    ],
+    updateHistory: [
+      { version: '0.1', date: '2026-03-07', changes: ['初始发布', '支持 arm64 架构', '路由策略测试功能'] },
+    ],
+  },
 ];
 
 export const categories = ['全部', '网络工具', '系统工具', '监控工具', '安全工具', '分析工具'];
