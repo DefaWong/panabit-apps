@@ -80,7 +80,14 @@ export function AppCard({ app, index }: AppCardProps) {
               {app.name}
             </h3>
             <div className="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
-              <span className="font-mono">@{app.author}</span>
+              <a
+                href={`https://github.com/${app.author}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono hover:text-[var(--color-primary)] transition-colors"
+              >
+                @{app.author}
+              </a>
               <span>·</span>
               <span className="px-2 py-0.5 rounded-full text-xs" style={{ background: 'rgba(99, 102, 241, 0.15)', color: '#818cf8' }}>
                 {app.category}
